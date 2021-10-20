@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/login.js" type="module"></script>
+    <title>NM Login</title>
+</head>
+<body>
+    <!--...NavBar...-->
+    <nav >
+        <div class="NM-NavBar" > 
+            <div class="NM-div-title">
+                <h1>Nerea Messis</h1>
+            </div> 
+            
+            <input type="checkbox"  id="btn-menu">
+            <label for="btn-menu"><img src="./img/header/icono-menu.png" alt="" width="30px"></label>
+    
+            <div class="NM-div-Menu" id="menu" >
+                <ul>
+                    <li><a href="/index.html"><h5>Home</h5></a></li>
+                    <li><a href="#"><h5>Nosotros</h5></a></li>
+                    <li><a href=""><h5>Diseño NM-115</h5></a></li>
+                    <li><a href=""><h5>Galeria</h5></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--LOGIN-->
+    <div class="NM-Login">
+        <div class="NM-div-Login">
+            <!--Ingreso Exitoso-->
+            <div class="NM-div-LoginExitoso" id="NM-div-LoginExitoso">
+                <div id="LoginExitoso">
+                    <div id="LoginExitosoTitle">
+                        <img src="./img/login/LoginExitoso.png" alt="" width="15%"> 
+                        <h2>Inicio Exitoso</h2>
+                    </div><br>
+                    <p >Bienvenido</p>
+                    <div id="MostrarLogin">
+
+                    </div>
+                    <!--Se Muestran Los datos ingresados-->
+                </div>
+                <div class="NM-div-button">
+                    <div>
+                        <input type="submit" value="OK" id="btn-ok" class="NM-button" ><br>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const DivRegistroExitoso=document.querySelector('#RLoginExitoso')
+            </script>
+            
+            <div class="NM-IniciarSesion">
+                <div class="NM-div-IniciarSesion">
+                    <h2>Iniciar sesión</h2>
+                     <img src="./img/login/Frontal02.jpeg" alt="NM_Login" class="NM-Login-imag">
+                </div>
+            </div>
+    
+            <div class="NM-div-formulario-Login">
+                <form action="" id="form-login">
+        
+                    <label for="correo">Correo electrónico </label>
+                    <input type="email" name="correo" id="correo" placeholder="Escriba aquí su correo">
+                    <p id="NM-CO-correo">*Campo Obligatorio</p>
+                    <p id="NM-correo-formato">El correo debe tener el siguiente formato: "nombre+@+servidor+dominio"</p>
+                    <p id="NM-correo-ejemplo">Ejemplo: usuario@hotmail.com</p>
+
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Escriba aquí su contraseña">
+                    <p id="NM-CO-password">*Campo Obligatorio</p>
+                    <p id="NM-password-8caracteres">La contraseña debe ser mayor o igual a 8 dígitos</p>
+                    <p id="NM-password-minuscula">La contraseña debe tener por lo menos una letra minúscula</p>
+                    <p id="NM-password-mayuscula">La contraseña debe tener por lo menos una letra mayúscula</p>
+                    <p id="NM-password-digito">La contraseña debe tener por lo menos un número</p><br>
+
+                    <label for="captcha">CAPTCHA</label>
+                    <input type="number" name="captcha" id="captcha" placeholder="¿Qué resultado da el cuarto de un tercio de 12000?">
+                    <p id="NM-CO-Catcha">*Campo Obligatorio</p>
+                </form>
+
+                <div class="NM-div-button">
+                    <div>
+                        <input type="submit" value="Iniciar Sesión" id="btn-submit-form-login" class="NM-button" ><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

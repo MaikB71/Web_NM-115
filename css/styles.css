@@ -1,0 +1,683 @@
+
+body{
+    display:-webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: auto;
+    /*font-family: 'Be Vietnam Pro', sans-serif;*/
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #191919;
+}
+
+/***********------index.html------**************/
+
+/******...NavBar...*********/
+nav{
+    background-color: #191919 ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vmax;
+}
+.NM-NavBar{
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: #191919 ;
+    width: 90%;
+    height: 6vmax;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8vw;
+    border-bottom: 1px solid white;
+}
+.NM-div-title{
+    width: 40%;
+    padding: 0% 0%;
+}
+.NM-div-Menu{
+    width: 60%;
+    display: flex;
+    justify-content: right;
+    padding: 0% 0%;
+    align-items: center;
+    animation: NavMenu 0.5s ease-in;
+}
+#btn-menu{
+    display: none;
+}
+nav label{
+    display: none;
+    text-align: center;    
+    width: 10%;
+}
+nav label:hover{
+    cursor: pointer;
+    background: #191919;
+    filter: invert();
+}
+.NM-div-Menu ul{
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    flex-direction: row; 
+}
+.NM-div-Menu li:hover{
+    background: #191919;
+    filter: invert();
+}
+.NM-div-Menu li a{
+    display: block;
+    padding: 0% 2vw;
+    color: white;
+    text-decoration: none;
+}
+@keyframes NavMenu{
+    from{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to{
+        opacity: 5;
+        transform: translateX(0%);
+    }
+}
+
+/******...NavBar RESPONSIVE...*********/
+@media screen and (max-width:600px) {
+    nav{
+        height: 11vh;
+    }
+
+    nav label{
+        display: block;
+        z-index: 1;
+        
+    }
+    
+    .NM-NavBar{
+        width: 80%;
+        font-size: 4vw;
+        height: 9vh;
+    }
+
+    .NM-div-title{
+        width: 100%;
+
+    }
+    .NM-div-Menu{
+        display: none;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+		top: 10vh;
+		background-color: rgba(25,25,25,0.8);
+        flex-direction: column;
+        align-items: center;
+        width: 34%;   
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .NM-div-Menu ul{
+        text-align: center;
+        flex-direction: column;
+        border-left: 1px solid rgba(45,45,45,1);
+        margin: 0%;
+        
+    }
+    .NM-div-Menu li{
+        border-bottom: 1px solid rgba(45,45,45,1);
+    }
+    input[type=checkbox]:checked~ .NM-div-Menu{
+        display: flex;
+        transform: translateX(0%);
+        transition: transform 0.3s ease-in;
+    }
+}
+
+/************...DIV-CONTAINER-HEADER...************/
+.containerHeader{
+    background:#191919;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    
+}
+.headerItem1{
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 6%;
+}
+.headerItem1 .headerTitle{
+width: 100%;
+color: white;
+font-size: 3vw;
+font-weight: bolder;
+text-align: left;
+}
+.headerItem1 .headerText{
+width: 100%;
+color: white;
+text-align: left;
+font-size: 1.2vw;
+text-align: justify;
+}
+.containerHeader .headerbutton{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 4vw;
+    border-style: solid;
+    border-color: white;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+.containerHeader .headerbutton:hover{
+    background: #191919;
+    filter: invert();
+}
+.containerHeader .headerbutton div{
+    color: white;
+    display: flex;
+    text-align: center;
+}
+.headerItem2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 80%;
+    height: 34vmax;
+    margin: 2%;
+    animation: ImagHeader 1.5s ease-in;
+    overflow:hidden;
+}
+
+@keyframes ImagHeader{
+    from{
+        -webkit-transform:scale(0.2);
+        transform:scale(0.2);
+    }
+    to{
+        -webkit-transform:scale(1);
+        transform:scale(1);
+    }
+}
+
+.headerItem2:hover{
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+    transition: 1s;
+}
+.headerItem2 img{
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+a{
+    color: #191919
+}
+
+/************...DIV-CONTAINER-HEADER RESPONSIVE...************/
+@media screen and (max-width:600px) {
+    .containerHeader{
+        flex-direction: column-reverse;
+        width: 100%;
+        
+    }
+    .headerItem2{
+        width: 80%;
+        height: 60vw;
+        margin: 2%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .headerItem1{
+        margin: 2%;
+        width: 80%;
+        align-items: center;
+        padding-bottom: 3%;
+        flex-direction: column;
+
+    }
+
+    .headerItem1 .headerTitle{
+        font-size: 8vw;
+        text-align: center;
+        padding-bottom: 6%;
+    }
+        
+    .headerItem1 .headerText{
+        width: 95%;
+        text-align: center;
+        font-size: 3.8vw;
+        padding-bottom: 5%;
+    }
+        
+    .headerItem1 .headerbutton{
+        align-self: center;
+        width: 45%;
+        height: 12vw;
+        font-size: 4vw;
+    }
+}
+/************...Reseña del programa...************/
+.NM-Programa{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #191919;
+    background-color: white;
+}
+.NM-Programa-img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    width: 50%;
+    height: 34vmax;
+    margin: 2%;
+    animation: ImagHeader 1.5s ease-in;
+    overflow:hidden;
+}
+.NM-Programa-img img{
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+.NM-Programa-reseña{
+    display: flex;
+    width: 50%;
+
+}
+
+
+
+/***********-----registro.html-----**************/
+.NM-Registro{
+    display: flex;
+    justify-content: center;
+    background-color: #191919;
+    width: 100%;
+    padding: 4% 0%;
+}
+.NM-div-Registro{
+    display: flex;
+    background-color: #191919;
+    width: 80%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid white;
+    position: relative;
+    flex-direction: row;
+    z-index: 10;
+
+    justify-content: center;
+}
+.NM-Registrate{
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    font-size: 1.3vw;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.NM-div-formulario{
+    display:flex;
+    padding: 2% 5%;
+    flex-direction: column;
+    width: 50%;
+    color: white;
+    font-size: 1.2vw;
+}
+.NM-Registro-imag {
+    max-width: 50%;
+    height: auto;
+    animation: ImagHeader 1.5s ease-in;
+}
+.NM-Registro-imag:hover{
+    max-width: 53%;
+    transition: all 1s;
+}
+.NM-div-formulario>form{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+.NM-div-formulario>form>input{
+    width: 100%;
+    padding: 0.5%;
+    border: none;
+    background-color: #191919;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 1.2vw;
+}
+.NM-div-formulario>form>label{
+    padding: 0.7% 0%;
+ 
+}
+.NM-div-button{
+    display: flex;
+    justify-content: center;
+    padding: 3% 0%;
+}
+.NM-div-button>div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    border-style: solid;
+    border-color: white;
+    align-self: flex-start;
+    font-weight: bold;
+}
+.NM-div-button>div:hover{
+    background: #191919;
+    filter: invert();
+    cursor: pointer;
+
+}
+.NM-div-button>div>input:hover{
+    cursor: pointer;
+
+}
+.NM-button{
+    text-align: center;
+    font-size: 1.5vw;
+    background-color:#191919 ;
+    color: white;
+    padding: 2% 4%;
+    border-color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+}
+.NM-div-formulario>form>label{
+    padding-top: 3%;
+}
+
+.NM-div-formulario>form>p{
+    color: red;
+    font-size: 0.9vw;
+    margin-bottom: 0;
+    margin-top: 0.2vw;
+    display: none;
+}
+/***********-----Registro Exitoso-----**************/
+.NM-div-RegistroExitoso{
+    display: none;
+    background-color: #191919;
+    color: white;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    border: 1px solid white;
+    z-index: 20;
+    font-size: 1.4vw;
+}
+#RegistroExitosoTitle{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 5%;
+}
+#RegistroExitosoTitle>h2{
+    margin-left: 2%;
+}
+#RegistroExitoso>p{
+    text-align: left;
+    align-items: left;
+    width: 100%;
+    margin: 1% 15%;
+}
+#MostrarRegistro{
+    flex-direction: column;
+    line-height: 1vw;
+}
+
+
+
+
+/***********...registro RESPONSIVE...**************/
+@media screen and (max-width:600px) {
+.NM-div-Registro{
+    width: 70%;
+    flex-direction: column;
+}
+.NM-Registrate{
+    width: 100%;
+    font-size: 3.5vw;
+}
+.NM-div-formulario{
+    padding: 5% 10%;
+    width: 80%;
+    font-size: 4vw;
+}
+.NM-div-formulario>form>input{
+    width: 100%;
+    padding: 2%;
+    font-size: 3.5vw;
+}
+.NM-Registro-imag {
+    max-width: 25%;
+    height: auto;
+}
+.NM-button{
+    font-size: 3vw;
+}
+.NM-Registro-imag:hover{
+    max-width: 26%;
+    transition: all 1s;
+}
+}
+
+
+/***********-----Login.html-----**************/
+.NM-Login{
+    display: flex;
+    justify-content: center;
+    background-color: #191919;
+    width: 100%;
+    padding: 4% 0%;
+}
+.NM-div-Login{
+    display: flex;
+    background-color: #191919;
+    width: 60%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid white;
+    position: relative;
+    flex-direction: column;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.NM-IniciarSesion{
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    font-size: 1.3vw;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.NM-div-formulario-Login{
+    display:flex;
+    padding: 2% 5%;
+    flex-direction: column;
+    width: 60%;
+    color: white;
+    font-size: 1.2vw;
+    
+}
+.NM-Login-imag {
+    max-width: 30%;
+    height: auto;
+    animation: ImagHeader 1.5s ease-in;
+}
+.NM-Login-imag:hover{
+    max-width: 40%;
+    transition: all 1s;
+}
+.NM-div-formulario-Login>form{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+.NM-div-formulario-Login>form>input{
+    width: 100%;
+    padding: 0.5%;
+    border: none;
+    background-color: #191919;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 1.2vw;
+}
+.NM-div-formulario-Login>form>label{
+    padding: 0.7% 0%;
+ 
+}
+.NM-div-button{
+    display: flex;
+    justify-content: center;
+    padding: 3% 0%;
+}
+.NM-div-button>div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    border-style: solid;
+    border-color: white;
+    align-self: flex-start;
+    font-weight: bold;
+}
+.NM-div-button>div:hover{
+    background: #191919;
+    filter: invert();
+    cursor: pointer;
+
+}
+.NM-div-button>div>input:hover{
+    cursor: pointer;
+
+}
+.NM-button{
+    text-align: center;
+    font-size: 1.5vw;
+    background-color:#191919 ;
+    color: white;
+    padding: 2% 4%;
+    border-color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+}
+.NM-div-formulario-Login>form>label{
+    padding-top: 3%;
+}
+
+.NM-div-formulario-Login>form>p{
+    color: red;
+    font-size: 0.9vw;
+    margin-bottom: 0;
+    margin-top: 0.2vw;
+    display: none;
+}
+/***********-----Registro Exitoso-----**************/
+.NM-div-LoginExitoso{
+    display: none;
+    background-color: #191919;
+    color: white;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    border: 1px solid white;
+    z-index: 20;
+    font-size: 1.4vw;
+}
+#LoginExitosoTitle{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 5%;
+}
+#LoginExitosoTitle>h2{
+    margin-left: 2%;
+}
+#LoginExitoso>p{
+    text-align: left;
+    align-items: left;
+    width: 100%;
+    margin: 1% 15%;
+}
+#MostrarLogin{
+    flex-direction: column;
+    line-height: 1vw;
+}
+
+
+
+
+/***********...registro RESPONSIVE...**************/
+@media screen and (max-width:600px) {
+.NM-div-Login{
+    width: 70%;
+    flex-direction: column;
+}
+.NM-IniciarSesion{
+    width: 100%;
+    font-size: 3.5vw;
+}
+.NM-div-formulario-Login{
+    padding: 5% 10%;
+    width: 80%;
+    font-size: 4vw;
+}
+.NM-div-formulario-Login>form>input{
+    width: 100%;
+    padding: 2%;
+    font-size: 3.5vw;
+}
+.NM-Login-imag {
+    max-width: 25%;
+    height: auto;
+}
+.NM-button{
+    font-size: 3vw;
+}
+.NM-Login-imag:hover{
+    max-width: 26%;
+    transition: all 1s;
+}
+
+}

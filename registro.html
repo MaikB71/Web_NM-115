@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/form.js" type="module"></script>
+    <title>NM Registro</title>
+</head>
+<body>
+    <!--...NavBar...-->
+    <nav >
+        <div class="NM-NavBar" > 
+            <div class="NM-div-title">
+                <h1>Nerea Messis</h1>
+            </div> 
+            
+            <input type="checkbox"  id="btn-menu">
+            <label for="btn-menu"><img src="./img/header/icono-menu.png" alt="" width="30px"></label>
+    
+            <div class="NM-div-Menu" id="menu" >
+                <ul>
+                    <li><a href="/index.html"><h5>Home</h5></a></li>
+                    <li><a href="#"><h5>Nosotros</h5></a></li>
+                    <li><a href=""><h5>Diseño NM-115</h5></a></li>
+                    <li><a href=""><h5>Galeria</h5></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--REGISTRO-->
+    <div class="NM-Registro">
+        <div class="NM-div-Registro">
+            <div class="NM-div-RegistroExitoso" id="NM-div-RegistroExitoso">
+                <div id="RegistroExitoso">
+                    <div id="RegistroExitosoTitle">
+                        <img src="./img/registro/RegistroExitoso.png" alt="" width="15%"> 
+                        <h2>  Registro Exitoso</h2>
+                    </div><br>
+                    <p >El usuario:</p>
+                    <div id="MostrarRegistro">
+
+                    </div>
+                    <p>Ha sido registrado correctamente</p>
+                    <!--Se Muestran Los datos ingresados-->
+
+
+                </div>
+                <div class="NM-div-button">
+                    <div>
+                        <input type="submit" value="OK" id="btn-ok" class="NM-button" ><br>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const DivRegistroExitoso=document.querySelector('#RegistroExitoso')
+            </script>
+            
+            
+            <div class="NM-Registrate">
+                <div class="NM-div-Registrate">
+                    <h2>REGISTRATE</h2>
+                     <img src="./img/registro/Planos02.PNG" alt="NM_Registro" class="NM-Registro-imag">
+                </div>
+            </div>
+    
+            <div class="NM-div-formulario">
+                <form action="" id="form-registro">
+                    <label for="nombre" >Nombre </label>
+                    <input type="text" name="Nombre" id="nombre" placeholder="Escriba aquí su nombre" autofocus="autofocus" >
+                    <p id="NM-CO-nombre">*Campo Obligatorio</p>
+                    <p id="NM-nombre-4caracteres">El Nombre debe tener más de 4 caracteres</p>
+                    <p id="NM-nombre-30caracteres">El Nombre debe tener menos de 30 caracteres</p>
+                    <p id="NM-nombre-Nonumeros">El Nombre No debe tener números</p>
+
+                    <label for="apellidos">Apellido </label>
+                    <input type="text" name="Apellido" id="apellidos" placeholder="Escriba aquí su apellido">
+                    <p id="NM-CO-apellidos">*Campo Obligatorio</p>
+                    <p id="NM-apellidos-4caracteres">El Apellido debe tener más de 4 caracteres</p>
+                    <p id="NM-apellidos-30caracteres">El Apellido debe tener menos de 30 caracteres</p>
+                    <p id="NM-apellidos-Nonumeros">El Apellido No debe tener números</p>
+
+                    <label for="telefono">Teléfono </label>
+                    <input type="tel" name ="Telefono" id="telefono" placeholder="Escriba aquí su teléfono">
+                    <p id="NM-CO-telefono">*Campo Obligatorio</p>
+                    <p id="NM-telefono-7digitos">El Teléfono debe tener solamente 7 dígitos</p>
+                    <p id="NM-telefono-Noletras">El Teléfono No debe contener letras</p>
+                    
+
+                    <label for="correo">Correo </label>
+                    <input type="email" name="correo" id="correo" placeholder="Escriba aquí su correo">
+                    <p id="NM-CO-correo">*Campo Obligatorio</p>
+                    <p id="NM-correo-formato">El correo debe tener el siguiente formato: "nombre+@+servidor+dominio"</p>
+                    <p id="NM-correo-ejemplo">Ejemplo: usuario@hotmail.com</p>
+
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Escriba aquí su contraseña">
+                    <p id="NM-CO-password">*Campo Obligatorio</p>
+                    <p id="NM-password-8caracteres">La contraseña debe ser mayor o igual a 8 dígitos</p>
+                    <p id="NM-password-minuscula">La contraseña debe tener por lo menos una letra minúscula</p>
+                    <p id="NM-password-mayuscula">La contraseña debe tener por lo menos una letra mayúscula</p>
+                    <p id="NM-password-digito">La contraseña debe tener por lo menos un número</p>
+                </form>
+
+                <div class="NM-div-button">
+                    <div>
+                        <input type="submit" value="REGISTRATE" id="btn-submit-form" class="NM-button" ><br>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
