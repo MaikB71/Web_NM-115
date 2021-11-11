@@ -35,6 +35,8 @@ function validateForm(){
     if(checkNombre() && checkApellido() && checkTelefono() && checkCorreo() && checkContrasena()){
         // Guarda los Registros 
         let registros=agregarRegistro();
+        // Enviando datos para agregar 
+        window.location.href=`agregar/${nombre}/${apellidos}/${telefono}/${correo}/${password}`;
         // Muestra el Usuario Registrado en pantalla
         const mynombre=document.createElement('p');
         const myapellido=document.createElement('p');

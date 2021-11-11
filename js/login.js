@@ -5,39 +5,28 @@ document.querySelector("#btn-submit-form-login").addEventListener('click', login
 function login(){
     const correoingresado= document.getElementById("correo").value;
     const contrasenaingresada= document.getElementById("password").value;
-    let usuario=false;
-    let captcha=false; 
-    let contrasena=false;
-    for(var x in registros){
-        if(registros[x].correo==correoingresado){
-            usuario=true;
-            if(registros[x].password==contrasenaingresada){
-                contrasena=true;
-            }
-        }
+    const captcha=document.getElementById("captcha").value;
+    // Alertas 
+    if(correoingresado===""){
+        document.getElementById("NM-CO-correo").style.display="block";
+    }else{document.getElementById("NM-CO-correo").style.display="none";}
+    if(contrasenaingresada===""){
+        document.getElementById("NM-CO-password").style.display="block";
+    }else{document.getElementById("NM-CO-password").style.display="none";} 
+    if(captcha===""){
+        document.getElementById("NM-CO-Catcha").style.display="block";
+    }else{document.getElementById("NM-CO-Catcha").style.display="none";} 
+    // Verificando el ingreso de los datos
+    function validarCAPTCHA(){
+        const valor=document.getElementById("captcha").value;
+        return (valor==1000) ? true:false;
     }
-    if (validarCAPTCHA()){
-        captcha=true;
+    const validar_captcha=validarCAPTCHA();
+    if(correoingresado!=="" && contrasenaingresada!=="" && captcha!==""){
+        // Enviando datos para consultar 
+        window.location.href=`consulta/${correoingresado}/${contrasenaingresada}/${validar_captcha}`;
+        window.location.href=`consulta/${correoingresado}/${contrasenaingresada}/${validar_captcha}`;
+        window.location.href=`consulta/${correoingresado}/${contrasenaingresada}/${validar_captcha}`;
     }
-    if(usuario==false){
-        console.log("Usuario no registrado")
-    }
-    if(usuario==true && contrasena==false){
-        console.log("Contraseña incorrecta")
-    }
-    if(usuario==true && contrasena==true && captcha==false){
-        console.log("Error en el CAPTCHA")
-    }
-    if(usuario==true && contrasena==true && captcha==true){
-        return true;
-    }else{return false;}
     
 }
-
-function validarCAPTCHA(){
-    const valor=document.getElementById("captcha");
-    return (valor==1000) ? true:false;
-}
-    
-
-export{login,validarCAPTCHA,registros};

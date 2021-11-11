@@ -6,9 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/form.js" type="module"></script>
+    <link rel="shortcut icon" href="./img/favicoin/favicoin.ico" type="image/x-icon">
     <title>NM Registro</title>
+    <!--Iconos-->
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/icono/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/icono/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/icono/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/icono/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/icono/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/icono/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/icono/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/icono/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icono/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/icono/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icono/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/icono/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icono/favicon-16x16.png">
+    <link rel="manifest" href="./img/icono/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./img/icono/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <!-- Intro -->
+    <div class="loading" id="onload">
+        
+        <img src="img/loader/loader.gif" alt="" srcset="">
+
+    </div>
+
+    <!-- Noti -->
+
+    <div class="saludo">
+
+        <div>
+            <p>Registrate</p>
+        </div>
+
+    </div>
+
     <!--...NavBar...-->
     <nav >
         <div class="NM-NavBar" > 
@@ -21,10 +57,12 @@
     
             <div class="NM-div-Menu" id="menu" >
                 <ul>
+                    
                     <li><a href="/index.html"><h5>Home</h5></a></li>
-                    <li><a href="#"><h5>Nosotros</h5></a></li>
-                    <li><a href=""><h5>Diseño NM-115</h5></a></li>
-                    <li><a href=""><h5>Galeria</h5></a></li>
+                    <li><a href="/nosotros.html"><h5>Nosotros</h5></a></li>
+                    <li><a href="/diseno.html"><h5>Diseño</h5></a></li>
+                    <li><a href="/galeria.html"><h5>Galeria</h5></a></li>
+                    <li><a href="/login.html"><h5>Login</h5></a></li>
                 </ul>
             </div>
         </div>
@@ -53,6 +91,7 @@
                         <input type="submit" value="OK" id="btn-ok" class="NM-button" ><br>
                     </div>
                 </div>
+
             </div>
 
             <script>
@@ -86,7 +125,7 @@
                     <label for="telefono">Teléfono </label>
                     <input type="tel" name ="Telefono" id="telefono" placeholder="Escriba aquí su teléfono">
                     <p id="NM-CO-telefono">*Campo Obligatorio</p>
-                    <p id="NM-telefono-7digitos">El Teléfono debe tener solamente 7 dígitos</p>
+                    <p id="NM-telefono-7digitos">El Teléfono debe tener solamente 10 dígitos</p>
                     <p id="NM-telefono-Noletras">El Teléfono No debe contener letras</p>
                     
 
@@ -115,4 +154,6 @@
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/intro.js"></script>
 </html>

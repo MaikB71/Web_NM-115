@@ -9,35 +9,172 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #191919;
 }
+/* Idioma */
+
+.idioma{
+
+    position: absolute;
+    /* border-style: solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    bottom: 2%;
+    left: 6%;
+}
+
+.idioma img{
+
+    height: 60%;
+    width: auto;
+}
+
+
+
+/* Intro */
+
+.hidden{
+
+    background: #191919;
+    overflow: hidden;
+
+}
+
+.loading{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #191919;
+    z-index: 20;
+
+}
+
+.loading img{
+
+    width: 7%;
+    height: auto;
+}
+
+@media(max-width:1000px){
+
+    .loading img{
+
+        width: 15%;
+    }
+}
+
+/* Saludo */
+
+.saludo{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    bottom: 2%;
+    right: 1%;
+    z-index: 100;
+    animation: bienvenido;
+    animation-duration: 8s;
+    font-size: 0%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+@keyframes bienvenido{
+
+    15%{
+        opacity: 90%;
+        height: 100px;
+        width: 0px;
+        
+    }
+    25%{
+        color: transparent;
+        font-size:0%; 
+    }
+
+    26%{
+
+        font-size: 25px;
+        font-weight: bold;
+    }
+    30%{
+        width: 200px;
+        color:#191919;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    85%{
+
+       height: 100px;
+       width: 200px;
+       color:#191919;
+       font-size: 25px;
+       font-weight: bold;
+    }
+    
+    90%{
+
+        color: transparent;
+        font-size:0%; 
+
+    }
+
+    100%{
+        opacity: 90%;
+        height: 100px;
+        width: 0px;
+        
+    }
+}
 
 /***********------index.html------**************/
 
 /******...NavBar...*********/
 nav{
-    background-color: #191919 ;
+    /* background-color: #191919 ; */
+    background:#191919  ;
     width: 100%;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vmax;
+    height: 6vmax;
+    z-index: 20;
 }
 .NM-NavBar{
     color: white;
     display: flex;
     align-items: center;
-    background-color: #191919 ;
+    justify-content: center;
+    /* background-color: #191919 ; */
+    /* background: blue; */
     width: 90%;
     height: 6vmax;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.8vw;
     border-bottom: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 .NM-div-title{
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 40%;
+    height: 100%;
     padding: 0% 0%;
+    /* background: rebeccapurple; */
 }
 .NM-div-Menu{
+   
+    /* background: yellow; */
     width: 60%;
+    height: 100%;
     display: flex;
     justify-content: right;
     padding: 0% 0%;
@@ -46,11 +183,11 @@ nav{
 }
 #btn-menu{
     display: none;
+    /* background: rebeccapurple; */
 }
 nav label{
     display: none;
-    text-align: center;    
-    width: 10%;
+   
 }
 nav label:hover{
     cursor: pointer;
@@ -58,15 +195,22 @@ nav label:hover{
     filter: invert();
 }
 .NM-div-Menu ul{
+    /* background:green; */
+    height: 100%;
     display: flex;
     margin: 0;
     list-style: none;
-    padding: 0;
-    flex-direction: row; 
+    /* height: 90px; */
+    flex-direction: row;
+    
 }
 .NM-div-Menu li:hover{
     background: #191919;
     filter: invert();
+    text-decoration: overline;
+    
+    /*text-decoration: underline; */
+    
 }
 .NM-div-Menu li a{
     display: block;
@@ -89,22 +233,37 @@ nav label:hover{
 @media screen and (max-width:600px) {
     nav{
         height: 11vh;
+        /* background: red; */
     }
+    /*
+    .NM-div-Menu {
+        /* background: rebeccapurple; */
+    /*} */ 
 
     nav label{
         display: block;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         z-index: 1;
+        /* background: blue; */
         
     }
     
+   
     .NM-NavBar{
         width: 80%;
         font-size: 4vw;
         height: 9vh;
+        width: 95%;
+            /* background: green; */
     }
 
     .NM-div-title{
         width: 100%;
+        justify-content: center;
 
     }
     .NM-div-Menu{
@@ -113,22 +272,27 @@ nav label:hover{
         z-index: 2;
         right: 0;
 		top: 10vh;
-		background-color: rgba(25,25,25,0.8);
+        /* background: rebeccapurple; */
+		/* background-color: rgba(25,25,25,0.8); */
         flex-direction: column;
         align-items: center;
-        width: 34%;   
+        justify-content: center;
+        width: 50%;   
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
     }
     .NM-div-Menu ul{
         text-align: center;
         flex-direction: column;
-        border-left: 1px solid rgba(45,45,45,1);
+        /* border-left: 1px solid rgba(45,45,45,1); */
         margin: 0%;
         
+        /* background-color: rgba(25,25,25,0.8); */
     }
     .NM-div-Menu li{
         border-bottom: 1px solid rgba(45,45,45,1);
+        /* background-color: rgba(25,25,25,0.8);  */
+        background: #191919;
     }
     input[type=checkbox]:checked~ .NM-div-Menu{
         display: flex;
@@ -139,13 +303,14 @@ nav label:hover{
 
 /************...DIV-CONTAINER-HEADER...************/
 .containerHeader{
-    background:#191919;
+    /* background:red; */
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-items: center;
     width: 100%;
+    height: 100vh;
     
 }
 .headerItem1{
@@ -182,6 +347,7 @@ text-align: justify;
     align-self: flex-start;
     font-weight: bold;
     font-size: 1.5vw;
+    /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
 }
 .containerHeader .headerbutton:hover{
     background: #191919;
@@ -203,23 +369,24 @@ text-align: justify;
     margin: 2%;
     animation: ImagHeader 1.5s ease-in;
     overflow:hidden;
+    transition: 1.5s;
 }
 
-@keyframes ImagHeader{
+/* @keyframes ImagHeader{
     from{
-        -webkit-transform:scale(0.2);
-        transform:scale(0.2);
+        -webkit-transform:scale(0.7);
+        transform:scale(0.7);
     }
     to{
         -webkit-transform:scale(1);
         transform:scale(1);
     }
-}
+} */
 
 .headerItem2:hover{
     -webkit-transform:scale(1.07);
     transform:scale(1.07);
-    transition: 1s;
+    transition: 2s;
 }
 .headerItem2 img{
     display: flex;
@@ -239,18 +406,25 @@ a{
     }
     .headerItem2{
         width: 80%;
-        height: 60vw;
+        height: 40vh;
         margin: 2%;
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
+        align-items: center;
+        /* background: rebeccapurple; */
+        
     }
 
     .headerItem1{
+        /* order: 2; */
         margin: 2%;
         width: 80%;
+        height: 60vh;
         align-items: center;
+        justify-content: center;
         padding-bottom: 3%;
         flex-direction: column;
+        /* background: rebeccapurple; */
 
     }
 
@@ -274,6 +448,8 @@ a{
         font-size: 4vw;
     }
 }
+
+
 /************...Reseña del programa...************/
 .NM-Programa{
     width: 100%;
@@ -311,8 +487,11 @@ a{
 /***********-----registro.html-----**************/
 .NM-Registro{
     display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: #191919;
+    /* background: red; */
+    /* background-color:red; */
+    height: 100vh;
     width: 100%;
     padding: 4% 0%;
 }
@@ -320,15 +499,20 @@ a{
     display: flex;
     background-color: #191919;
     width: 80%;
+    height: auto;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid white;
     position: relative;
     flex-direction: row;
     z-index: 10;
-
+    transition: 1.5s;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
 }
 .NM-Registrate{
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: white;
     width: 50%;
@@ -336,15 +520,18 @@ a{
     line-height: 0;
     display: flex;
     align-items: center;
+    color:#191919 ;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .NM-div-formulario{
     display:flex;
     padding: 2% 5%;
+    justify-content: space-evenly;
     flex-direction: column;
     width: 50%;
     color: white;
     font-size: 1.2vw;
+
 }
 .NM-Registro-imag {
     max-width: 50%;
@@ -497,9 +684,11 @@ a{
 /***********-----Login.html-----**************/
 .NM-Login{
     display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: #191919;
+    /* background-color: red; */
     width: 100%;
+    height: 100vh;
     padding: 4% 0%;
 }
 .NM-div-Login{
@@ -564,7 +753,7 @@ a{
 .NM-div-button{
     display: flex;
     justify-content: center;
-    padding: 3% 0%;
+    padding: 2% 0%;
 }
 .NM-div-button>div{
     display:flex;
@@ -592,7 +781,7 @@ a{
     font-size: 1.5vw;
     background-color:#191919 ;
     color: white;
-    padding: 2% 4%;
+    padding: 5% 0%;
     border-color: white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border: none;
@@ -608,13 +797,13 @@ a{
     margin-top: 0.2vw;
     display: none;
 }
-/***********-----Registro Exitoso-----**************/
+/***********-----Login Exitoso-----**************/
 .NM-div-LoginExitoso{
-    display: none;
+    display: block;
     background-color: #191919;
     color: white;
     position: absolute;
-    width: 50%;
+    width: 80%;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
@@ -634,11 +823,11 @@ a{
 #LoginExitosoTitle>h2{
     margin-left: 2%;
 }
-#LoginExitoso>p{
-    text-align: left;
-    align-items: left;
+#LoginExitoso>h1{
+    text-align: center;
+    align-items: center;
     width: 100%;
-    margin: 1% 15%;
+    margin: 1% 0%;
 }
 #MostrarLogin{
     flex-direction: column;
@@ -648,7 +837,7 @@ a{
 
 
 
-/***********...registro RESPONSIVE...**************/
+/***********...Login RESPONSIVE...**************/
 @media screen and (max-width:600px) {
 .NM-div-Login{
     width: 70%;
@@ -681,3 +870,509 @@ a{
 }
 
 }
+
+/* Nosotros*/
+
+body {
+    margin:0;
+}
+.General {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    background: #191919;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+@media(max-width: 1000px) {
+    .General{
+        flex-direction: column;
+    }
+}
+
+.hidden{
+    
+    background: #191919;
+    overflow: hidden;
+
+}
+
+.loading{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #191919;
+    z-index: 20;
+
+}
+
+.loading img{
+
+    width: 7%;
+    height: auto;
+}
+
+@media(max-width:1000px){
+
+    .loading img{
+
+        width: 15%;
+    }
+}
+
+nav{
+    /* background-color: #191919 ; */
+    /* background: red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vmax;
+    z-index: 20;
+}
+
+.NM-NavBar {
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: #191919 ;
+    /* background: blue; */
+    width: 90%;
+    height: 6vmax;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8vw;
+    border-bottom: 1px solid white;
+}
+.NM-div-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    padding: 0% 0%;
+    /* background: rebeccapurple; */
+}
+.NM-div-Menu{
+   
+    /* background: yellow; */
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 0% 0%;
+    align-items: center;
+    animation: NavMenu 0.5s ease-in;
+}
+#btn-menu{
+    display: none;
+    background: rebeccapurple;
+}
+nav label{
+    display: none;
+   
+}
+nav label:hover{
+    cursor: pointer;
+    background: #191919;
+    filter: invert();
+}
+.NM-div-Menu ul{
+    /* background:green; */
+    height: 100%;
+    display: flex;
+    margin: 0;
+    list-style: none;
+    /* height: 90px; */
+    flex-direction: row;
+    /* background: gray;  */
+}
+.NM-div-Menu li:hover{
+    background: #191919;
+    filter: invert();
+    text-decoration: overline;
+    /*text-decoration: underline; */
+    
+}
+.NM-div-Menu li a{
+    display: block;
+    padding: 0% 2vw;
+    color: white;
+    text-decoration: none;
+}
+@keyframes NavMenu{
+    from{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to{
+        opacity: 5;
+        transform: translateX(0%);
+    }
+}
+
+
+
+/* <<<<<<<<NOSTROS>>>>>> */
+
+.nombreIntegrante{
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.NM-Registro-imag {
+    max-width: 50%;
+    height: auto;
+    justify-content: center;
+    animation: ImagHeader 1.5s ease-in;
+    position: relative;
+    top: 30%;
+}
+.NM-Registro-imag:hover{
+    max-width: 53%;
+    transition: all 1s;
+}
+
+
+.nosotrosContainer{
+
+    display: flex;
+    align-items:center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    /* background: rebeccapurple; */
+    margin-top: 9%;
+    line-height: 0%;
+}
+.NM-Conocenos{
+    color: white;
+    text-align: left;
+    justify-content: left;
+    font-size: 1.3vw;
+    line-height: 0;
+}
+
+.nosotrosContainer .NosotrosItems {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    /* background: red; */
+    flex-direction: row;
+    font-size: 1vw;
+    line-height: 0%;
+    top: 0%;
+}
+
+
+@media(max-width:700px){
+
+    .nosotrosContainer .NosotrosItems{
+
+        flex-direction: column;
+    }
+}
+
+.NM-Grupo-Trabajo-integrantes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+    height:80%;
+    /* background:green; */
+}
+
+
+.integrante{
+    display: flex;
+    
+    width: 90%;
+    height: 15%;
+    background: white;
+    border-style: solid;
+    border-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.integrante .integranteFoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    background: white;
+}
+
+.integrante .integranteFoto img{
+
+    height: 90%;
+    width: auto;
+    transition: 0.3s;;
+}
+.integrante .integranteFoto img:hover{
+
+    height: 100%;
+    transition: 0.3s;
+
+}
+.integrante .nombreIntegrante{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background: #191919;
+    color: white;
+    /* background: rebeccapurple; */
+}
+
+.integrante .socialIntegrantes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    background: #191919;
+}
+
+.integrante .socialIntegrantes a{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 60%;
+    /* background: yellow; */
+}
+
+.integrante .socialIntegrantes a  img{
+
+    height: 90%;
+    width: auto;
+    transition: 0.3s;
+
+}
+
+.integrante .socialIntegrantes a  img:hover{
+
+    height: 100%;
+    transition: 0.3s;
+
+}
+
+
+
+.NM-Grupo-Trabajo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width:45%;
+    background: white;
+    transition: 0.5s;
+    
+}
+
+.NM-Grupo-Trabajo:hover{
+
+    height: 90%;
+    transition: 0.5s;
+}
+
+.NM-Grupo-Trabajo div{
+
+    /*  background: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.NM-Grupo-Trabajo div img{
+
+    width: 40%;
+}
+
+
+/* <<<<<<<<DISEÑO>>>>>> */
+
+.containerHeaderDiseno {
+    
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left:5%;
+    margin-right: 5%;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+         
+    /* background: greenyellow; */
+
+}
+   
+
+.headerItem1Diseno {
+    /* margin-top: 30px;
+    margin-bottom: 25px;  */
+    display:flex;
+    flex-direction: row;
+    align-items:center; 
+    justify-content: center;   
+    width: 100%;
+    height: 100%;
+    /* background-color:blueviolet; */
+    
+
+}
+
+.headerItem2Diseno {
+    margin-top: 25px;
+    margin-bottom: 10px; 
+    display:flex;
+    flex-direction: row;
+    align-items:center;    
+    width: 100%;
+    height: 100%;
+    background-color:RED; 
+    
+
+}
+.headerTitleDiseno {
+
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:flex-start;
+    width: 45%;
+    height: 100%;
+    font-weight: bold;
+    color: white;
+     /*     background-color: blue;  */
+     text-align: center;
+}
+
+.headertextDiseno{
+
+    font-size:2vw;
+    font-family: sans-serif;
+    font-weight:normal
+    
+
+}
+
+.img1Diseno{
+    width:45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display:flex;
+    /* background-color: white; */
+    /* padding: 3px;  */
+    position: relative;
+    /* left: 300px; */
+    /* background: black; */
+    
+}
+
+#img1{
+    border-style: double;
+    /* border:3px solid black; */
+    background-color: white;
+    width:70%;
+    display:flex;
+    object-fit: cover;
+    
+}
+
+.img2Diseno{
+    display:flex;
+    background-color: white;
+    padding: 3px; 
+    position: relative;
+    left: 300px;
+    object-fit: cover;
+}
+
+#img2{
+    border:3px solid black;
+    background-color: white;
+}
+
+
+.img1Diseno:hover{
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    transition: 2s;
+}
+.img2Diseno:hover{
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    transition: 2s;
+}
+
+/* <<<<<<<<DISEÑO RESPONSIVO>>>>>> */
+
+
+@media(max-width:1024px){
+
+    .containerHeaderDiseno{
+
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+    .headerItem1Diseno{
+
+        flex-direction: column;
+        height: 90vh;
+        /* background: blue; */
+        justify-content: space-evenly;
+    }
+
+    .headerTitleDiseno{
+        width: 90%;
+        height: 40%;
+        /* background: red; */
+    }
+
+    .img1Diseno{
+        width: 90%;
+        /* background: yellow; */
+    }
+    .headerItem2Diseno{
+
+        flex-direction: column;
+    }
+
+}
+
+/* @media screen and (max-width: 768px) {
+    .containerHeader{
+       
+    flex-direction: column; 
+    }
+}
+
+@media screen and (max-width: 768px){
+    .headerItem1Diseno{
+        flex-direction: column;
+
+
+    }
+} */
