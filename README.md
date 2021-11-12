@@ -1,6 +1,6 @@
 Diseño de página web para la aeronave NM-115
 
-Proyecto Feria MinTic
+Proyecto Feria MinTic2022 - Ciclo 3
 - Michael Stiven Bustos Aguirre.
 - Luis David Corrales Olaya.
 - Juan Felipe Grajales Toro.
