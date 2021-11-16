@@ -1,14 +1,41 @@
-
 body{
     display:-webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     margin: auto;
-    /*font-family: 'Be Vietnam Pro', sans-serif;*/
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
     background-color: #191919;
 }
+h1{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em; 
+}
+h2{
+    display: block;
+    font-size: 1.3em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h5{
+    font-weight: bold;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+}
+p{
+    text-align: justify;
+    line-height: 160%;
+    font-size: 0.7em;
+
+}
+    
+
 /* Idioma */
 
 .idioma{
@@ -146,17 +173,15 @@ nav{
     align-items: center;
     height: 6vmax;
     z-index: 20;
+    
 }
 .NM-NavBar{
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: #191919 ; */
-    /* background: blue; */
     width: 90%;
     height: 6vmax;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.8vw;
     border-bottom: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
@@ -491,9 +516,8 @@ a{
     justify-content: center;
     /* background: red; */
     /* background-color:red; */
-    height: 100vh;
     width: 100%;
-    padding: 4% 0%;
+    padding: 10% 0% 0% 2%;
 }
 .NM-div-Registro{
     display: flex;
@@ -688,8 +712,7 @@ a{
     justify-content: center;
     /* background-color: red; */
     width: 100%;
-    height: 100vh;
-    padding: 4% 0%;
+    padding: 10% 0% 0% 2%;
 }
 .NM-div-Login{
     display: flex;
@@ -872,10 +895,6 @@ a{
 }
 
 /* Nosotros*/
-
-body {
-    margin:0;
-}
 .General {
     position: absolute;
     display: flex;
@@ -900,19 +919,6 @@ body {
 
 }
 
-.loading{
-
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    background: #191919;
-    z-index: 20;
-
-}
-
 .loading img{
 
     width: 7%;
@@ -927,49 +933,6 @@ body {
     }
 }
 
-nav{
-    /* background-color: #191919 ; */
-    /* background: red; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8vmax;
-    z-index: 20;
-}
-
-.NM-NavBar {
-    color: white;
-    display: flex;
-    align-items: center;
-    background-color: #191919 ;
-    /* background: blue; */
-    width: 90%;
-    height: 6vmax;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.8vw;
-    border-bottom: 1px solid white;
-}
-.NM-div-title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    height: 100%;
-    padding: 0% 0%;
-    /* background: rebeccapurple; */
-}
-.NM-div-Menu{
-   
-    /* background: yellow; */
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: right;
-    padding: 0% 0%;
-    align-items: center;
-    animation: NavMenu 0.5s ease-in;
-}
 #btn-menu{
     display: none;
     background: rebeccapurple;
@@ -983,16 +946,7 @@ nav label:hover{
     background: #191919;
     filter: invert();
 }
-.NM-div-Menu ul{
-    /* background:green; */
-    height: 100%;
-    display: flex;
-    margin: 0;
-    list-style: none;
-    /* height: 90px; */
-    flex-direction: row;
-    /* background: gray;  */
-}
+
 .NM-div-Menu li:hover{
     background: #191919;
     filter: invert();
@@ -1000,12 +954,7 @@ nav label:hover{
     /*text-decoration: underline; */
     
 }
-.NM-div-Menu li a{
-    display: block;
-    padding: 0% 2vw;
-    color: white;
-    text-decoration: none;
-}
+
 @keyframes NavMenu{
     from{
         opacity: 0;
@@ -1208,7 +1157,7 @@ nav label:hover{
 
 .containerHeaderDiseno {
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     margin-left:5%;
     margin-right: 5%;;
     display: flex;
@@ -1231,10 +1180,17 @@ nav label:hover{
     align-items:center; 
     justify-content: center;   
     width: 100%;
+    color: white;
     /* background-color:blueviolet; */
-    
-    
+}
+.headerItemDiseno>h2{
+    width: 100%;
+    text-align: left;
 
+}
+
+a{
+    color: white;
 }
 
 
@@ -1245,7 +1201,7 @@ nav label:hover{
     justify-content:flex-start;
     color: white;
      text-align: center;
-     font-size:1vw;
+     
    
 }
 
@@ -1337,3 +1293,11 @@ nav label:hover{
 
     }
 } */
+.NM-Final{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.headerTitleDiseno>p>a{
+    color: white;
+}

@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerea Messis - RFP</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/login.js" type="module"></script>
-    <title>NM Login</title>
     <!--Iconos-->
     <link rel="apple-touch-icon" sizes="57x57" href="./img/icono/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./img/icono/apple-icon-60x60.png">
@@ -27,11 +26,31 @@
     <meta name="theme-color" content="#ffffff">
 
 </head>
-<body>
+<body class="hidden">
+
+    <!-- Intro -->
+    <div class="loading" id="onload">
+        
+
+            <img src="./img/loader/loader.gif" alt="" srcset="">
+
+    </div>
+
+    <!-- Noti -->
+
+    <div class="saludo">
+
+        <div>
+            <p>RFP</p>
+        </div>
+
+    </div>
+    
+
     <!--...NavBar...-->
     <nav >
         <div class="NM-NavBar" > 
-            <div class="NM-div-title">
+            <div href="./index.html" class="NM-div-title">
                 <h1>Nerea Messis</h1>
             </div> 
             
@@ -50,63 +69,19 @@
         </div>
     </nav>
 
-    <!-- Intro -->
-
-
-    <div class="saludo">
-
-        <div>
-            <p>Login</p>
-        </div>
-
+    <!--CONTAINER HEADER-->   
+    <div class= "containerHeaderDiseno">
+        <div class = "headerItemDiseno">
+            <h1>Request For Proposals</h1> 
+            <embed src="./doc/RFP 2020-I Super CAS.pdf" type="application/pdf" width="90%" height="700vw" />
     </div>
 
-
-    <!-- Idioma -->
-
-   
-    <!--LOGIN-->
-    <div class="NM-Login">
-        <div class="NM-div-Login">
-            <div class="NM-IniciarSesion">
-                <div class="NM-div-IniciarSesion">
-                    <h2>Iniciar sesión</h2>
-                     <img src="./img/login/Frontal02.jpeg" alt="NM_Login" class="NM-Login-imag">
-                </div>
-            </div>
-    
-            <div class="NM-div-formulario-Login">
-                <form action="" id="form-login">
-        
-                    <label for="correo">Correo electrónico </label>
-                    <input type="email" name="correo" id="correo" placeholder="Escriba aquí su correo">
-                    <p id="NM-CO-correo">*Campo Obligatorio</p>
-                    <p id="NM-correo-formato">El correo debe tener el siguiente formato: "nombre+@+servidor+dominio"</p>
-                    <p id="NM-correo-ejemplo">Ejemplo: usuario@hotmail.com</p>
-
-                    <label for="password">Contraseña</label>
-                    <input type="password" name="password" id="password" placeholder="Escriba aquí su contraseña">
-                    <p id="NM-CO-password">*Campo Obligatorio</p>
-                    <p id="NM-password-8caracteres">La contraseña debe ser mayor o igual a 8 dígitos</p>
-                    <p id="NM-password-minuscula">La contraseña debe tener por lo menos una letra minúscula</p>
-                    <p id="NM-password-mayuscula">La contraseña debe tener por lo menos una letra mayúscula</p>
-                    <p id="NM-password-digito">La contraseña debe tener por lo menos un número</p><br>
-
-                    <label for="captcha">CAPTCHA</label>
-                    <input type="number" name="captcha" id="captcha" placeholder="¿Qué resultado da el cuarto de un tercio de 12000?">
-                    <p id="NM-CO-Catcha">*Campo Obligatorio</p>
-                </form>
-
-                <div class="NM-div-button">
-                    <div>
-                        <input type="submit" value="Iniciar Sesión" id="btn-submit-form-login" class="NM-button" ><br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="NM-Final"  >
         <h5>Nerea Messis | NM-115 </h5>
     </div>
+
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/intro.js"></script>
 </html>
