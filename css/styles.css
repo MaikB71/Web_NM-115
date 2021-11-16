@@ -31,7 +31,7 @@ h5{
 p{
     text-align: justify;
     line-height: 160%;
-    font-size: 0.6em;
+    font-size: 0.5em;
 
 }
     
@@ -994,19 +994,20 @@ nav label:hover{
 
     display: flex;
     align-items:center;
-    height: 100vh;
+  
     width: 100%;
     flex-direction: column;
     /* background: rebeccapurple; */
-    margin-top: 9%;
+    margin-top: 7%;
     line-height: 0%;
+  
 }
 .NM-Conocenos{
     color: white;
     text-align: left;
     justify-content: left;
-    font-size: 1.3vw;
-    line-height: 0;
+    font-size: 2vw;
+    line-height: 2;
 }
 
 .nosotrosContainer .NosotrosItems {
@@ -1014,20 +1015,20 @@ nav label:hover{
     align-items:center;
     justify-content: center;
     width: 90%;
-    height: 100%;
     /* background: red; */
     flex-direction: row;
-    font-size: 1vw;
+    font-size: 1.8vw;
     line-height: 0%;
     top: 0%;
+    
 }
 
 
-@media(max-width:700px){
+@media(max-width:600px){
 
     .nosotrosContainer .NosotrosItems{
 
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 
@@ -1037,20 +1038,18 @@ nav label:hover{
     justify-content: space-around;
     align-items: center;
     width: 55%;
-    height:80%;
-    /* background:green; */
+
 }
 
 
 .integrante{
     display: flex;
-    
     width: 90%;
-    height: 15%;
-    background: white;
+    background:#191919;
     border-style: solid;
-    border-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid white;
+
 
 }
 
@@ -1058,16 +1057,16 @@ nav label:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 20%;
+    width: 30%;
     background: white;
+
 }
 
 .integrante .integranteFoto img{
 
-    height: 90%;
-    width: auto;
+    width: 50%;
     transition: 0.3s;;
+
 }
 .integrante .integranteFoto img:hover{
 
@@ -1079,19 +1078,19 @@ nav label:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 50%;
     background: #191919;
     color: white;
     /* background: rebeccapurple; */
 }
-
+.integrante .nombreIntegrante>p{
+    line-height: 0px;
+}
 .integrante .socialIntegrantes{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;
-    width: 30%;
+    width: 20%;
     background: #191919;
 }
 
@@ -1106,15 +1105,14 @@ nav label:hover{
 
 .integrante .socialIntegrantes a  img{
 
-    height: 90%;
-    width: auto;
+    width: 80%;
     transition: 0.3s;
 
 }
 
 .integrante .socialIntegrantes a  img:hover{
 
-    height: 100%;
+    height: 80%;
     transition: 0.3s;
 
 }
@@ -1125,16 +1123,16 @@ nav label:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
     width:45%;
     background: white;
     transition: 0.5s;
+    height: 100%;
     
 }
 
-.NM-Grupo-Trabajo:hover{
+.NM-Grupo-Trabajo>div>img:hover{
 
-    height: 90%;
+    width: 60%;
     transition: 0.5s;
 }
 
