@@ -116,7 +116,7 @@ p{
 
     15%{
         opacity: 90%;
-        height: 100px;
+        height: 50px;
         width: 0px;
         
     }
@@ -131,15 +131,15 @@ p{
         font-weight: bold;
     }
     30%{
-        width: 200px;
+        width: 100px;
         color:#191919;
         font-size: 25px;
         font-weight: bold;
     }
     85%{
 
-       height: 100px;
-       width: 200px;
+       height: 70px;
+       width: 120px;
        color:#191919;
        font-size: 25px;
        font-weight: bold;
@@ -196,7 +196,6 @@ nav{
     /* background: rebeccapurple; */
 }
 .NM-div-Menu{
-   
     /* background: yellow; */
     width: 60%;
     height: 100%;
@@ -208,7 +207,7 @@ nav{
 }
 #btn-menu{
     display: none;
-    /* background: rebeccapurple; */
+    background: rebeccapurple; 
 }
 nav label{
     display: none;
@@ -258,43 +257,37 @@ nav label:hover{
 @media screen and (max-width:600px) {
     nav{
         height: 11vh;
-        /* background: red; */
     }
-    /*
-    .NM-div-Menu {
-        /* background: rebeccapurple; */
-    /*} */ 
-
-    nav label{
+    
+   
+    .NM-NavBar{
+        width: 90%;
+        font-size: 4vw;
+        height: 9vh;
+    }
+    .NM-NavBar label{
         display: block;
         align-items: center;
         padding-left: 5px;
         padding-right: 5px;
         padding-top: 5px;
         padding-bottom: 5px;
-        z-index: 1;
-        /* background: blue; */
+        z-index: 10;
         
-    }
-    
-   
-    .NM-NavBar{
-        width: 80%;
-        font-size: 4vw;
-        height: 9vh;
-        width: 95%;
-            /* background: green; */
     }
 
     .NM-div-title{
         width: 100%;
-        justify-content: center;
+        
+        justify-content: left;
+        height: 100%;
+        padding: 0% 0%;
 
     }
     .NM-div-Menu{
-        display: none;
+        display: flex;
         position: absolute;
-        z-index: 2;
+        z-index: 20;
         right: 0;
 		top: 10vh;
         /* background: rebeccapurple; */
@@ -302,9 +295,10 @@ nav label:hover{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 50%;   
+        width: 40%;   
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
+    
     }
     .NM-div-Menu ul{
         text-align: center;
@@ -324,6 +318,8 @@ nav label:hover{
         transform: translateX(0%);
         transition: transform 0.3s ease-in;
     }
+
+   
 }
 
 /************...DIV-CONTAINER-HEADER...************/
@@ -862,9 +858,13 @@ a{
 
 /***********...Login RESPONSIVE...**************/
 @media screen and (max-width:600px) {
+.NM-Login{
+    padding: 25% 0% 0% 2%;
+}
 .NM-div-Login{
     width: 70%;
     flex-direction: column;
+    
 }
 .NM-IniciarSesion{
     width: 100%;
@@ -1023,15 +1023,6 @@ nav label:hover{
     
 }
 
-
-@media(max-width:600px){
-
-    .nosotrosContainer .NosotrosItems{
-
-        flex-direction: column-reverse;
-    }
-}
-
 .NM-Grupo-Trabajo-integrantes{
     display: flex;
     flex-direction: column;
@@ -1085,6 +1076,7 @@ nav label:hover{
 }
 .integrante .nombreIntegrante>p{
     line-height: 0px;
+    font-size: 1.1vw;
 }
 .integrante .socialIntegrantes{
     display: flex;
@@ -1146,8 +1138,43 @@ nav label:hover{
 }
 
 .NM-Grupo-Trabajo div img{
-
     width: 40%;
+}
+
+@media(max-width:600px){
+
+    .nosotrosContainer{
+        padding-top: 11%;
+        
+    }
+   
+    .nosotrosContainer .NosotrosItems {
+        flex-direction: column-reverse;
+        width: 95%;
+        /* background: red; */
+        line-height: 0%;
+        top: 0%;
+        font-size: 3.5vw;
+    }
+
+    .NM-Grupo-Trabajo-integrantes{
+        width: 100%;
+    }
+
+    .NM-Grupo-Trabajo {
+        width: 90.5%;
+        background: white;
+        transition: 0.5s;
+        height: 100%;
+    }
+
+    .NM-Conocenos{
+        font-size: 4vw;
+    }
+    .integrante .nombreIntegrante>p{
+        font-size: 2.5vw;
+    }
+
 }
 
 
@@ -1247,13 +1274,14 @@ a{
 /* <<<<<<<<DISEÑO RESPONSIVO>>>>>> */
 
 
-@media(max-width:1024px){
+@media(max-width:600px){
 
     .containerHeaderDiseno{
-
+        padding-top: 10%;
         flex-direction: column;
         justify-content: center;
         height: auto;
+        font-size: 4vw;
     }
 
     .headerItemDiseno{
